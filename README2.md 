@@ -1,0 +1,53 @@
+# Super Trunfo de Cidades
+
+## Descrição do Projeto
+Este projeto é uma implementação simples do jogo **Super Trunfo** utilizando a linguagem **C**. O objetivo é criar e armazenar duas cartas de cidades, contendo informações como:
+- Estado
+- Código da carta
+- Nome da cidade
+- População
+- Área
+- PIB
+- Número de pontos turísticos
+
+O desafio principal foi seguir as restrições impostas pelo projeto, que proibia o uso de **estruturas de repetição** (como `for` ou `while`) e **estruturas de decisão** (como `if` ou `else`).
+
+## Funcionalidades
+- O usuário insere manualmente os dados de duas cidades.
+- Os dados são armazenados e exibidos na tela ao final da execução.
+
+## Desafios Enfrentados
+1. **Problemas com buffer do teclado**: O `scanf()` deixava caracteres `\n` no buffer, fazendo com que algumas entradas fossem "puladas".
+   - **Solução:** Usei `getchar();` após cada `scanf()` para limpar o buffer corretamente.
+
+2. **Restrição de não usar loops ou condições**:
+   - Como alternativa, todas as entradas foram feitas manualmente e sequencialmente, sem a possibilidade de reutilizar código para evitar repetições.
+
+3. **Entrada de strings**: O `scanf("%s", variavel)` não lê espaços, o que impedia a entrada correta de nomes de cidades.
+   - **Solução:** Usei `scanf(" %[^
+]", variavel);` para capturar strings com espaços.
+
+## Como Executar
+1. Baixe ou clone este repositório.
+2. Compile o arquivo em um terminal usando:
+   ```sh
+   gcc super_trunfo.c -o super_trunfo
+   ```
+3. Execute o programa:
+   ```sh
+   ./super_trunfo
+   ```
+
+## Tecnologias Utilizadas
+- Linguagem C
+- Compilador **GCC**
+- Terminal/Prompt de Comando
+
+## Melhorias Futuras
+- Melhorar a estrutura do código utilizando funções para evitar repetição.
+- Implementar um sistema de comparação entre as cartas.
+- Criar uma versão que suporte múltiplas rodadas e jogadores.
+
+---
+Este projeto foi um excelente exercício para reforçar conceitos básicos da linguagem C e trabalhar com manipulação de entradas e saídas. 🚀
+
